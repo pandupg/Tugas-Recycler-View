@@ -42,6 +42,9 @@ class CardViewFoodAdapter(private val listFood: ArrayList<Food>): RecyclerView.A
         holder.itemView.setOnClickListener {
             Toast.makeText(holder.itemView.context, "Kamu memilih " + listFood[holder.adapterPosition].nama, Toast.LENGTH_SHORT).show()
         }
+        holder.btnSave.setOnClickListener {Toast.makeText(holder.itemView.context, "Simpan " +listFood[holder.adapterPosition].nama, Toast.LENGTH_SHORT).show()
+        }
+
     }
 
     override fun getItemCount(): Int {
@@ -54,5 +57,6 @@ class CardViewFoodAdapter(private val listFood: ArrayList<Food>): RecyclerView.A
         var tvFrom: TextView = itemView.findViewById(R.id.tv_item_from)
         var btnFavorite: Button = itemView.findViewById(R.id.btn_set_favorite)
         var btnShare: Button = itemView.findViewById(R.id.btn_set_share)
+        var btnSave: Button = itemView.findViewById(R.id.btn_set_save)
     }
 }
